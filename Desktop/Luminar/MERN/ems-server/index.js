@@ -9,6 +9,7 @@ require('./db/connection')
 
  server.use(cors())
  server.use(express.json())
+ server.use("/uploads",express.static("./uploads"))
 server.use(router)
 
  server.get('/',(req,res)=>{
